@@ -1,14 +1,10 @@
 var mongoose=require('mongoose');
-mongoose.connect('mongodb://localhost@127.0.0.1:27017/serverdata');
 
-db.connection.on("error",function (error) {
-    console.log('---数据库连接失败---'+error);
+mongoose.connect('mongodb://localhost:27018/test',function (err) {
+    if(err){
+        console.log('数据库连接失败');
+    }else {
+        console.log('数据库连接成功');
+    }
 });
 
-
-db.connection.on("open",function () {
-    console.log('---数据库连接成功---');
-});
-
-
-module.exports=db;

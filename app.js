@@ -4,8 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var mongoose=require('mongoose');
- db=require('./dataconnect');
+var mongoose= require('mongoose');
+
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -45,4 +45,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+require('./dataconnect');
 module.exports = app;
