@@ -37,7 +37,7 @@ var mongoose = require("mongoose");
 
 ```
    mongoose.connect("mongodb://user:pass@ip:port/database");
- //mongoose.connect("mongodb://localhost@127.0.0.1:27018/test");  //咱们连本地的27018端口号。
+ //mongoose.connect("mongodb://localhost@127.0.0.1:27018/test");  //咱们连本地的27018端口号,test是数据库的名称。
 
 ```
 
@@ -48,5 +48,5 @@ var mongoose = require("mongoose");
 - ip是mongodb服务器可以访问ip地址，比如本地为127.0.0.1
 - port 是mongodb服务器可以访问端口，默认是27017
 
-##### 2.准备
+##### 2.测试数据库连接成功与否
 
